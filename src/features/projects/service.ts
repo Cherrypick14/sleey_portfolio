@@ -174,10 +174,12 @@ export const skillsList: Array<SkillData> = [
     id: 'frontendDevelopment',
     iconName: 'MonitorSmartphone',
     technologies: [
-      { id: 'html', name: 'HTML' },
-      { id: 'css', name: 'CSS' },
-      { id: 'javascript', name: 'JavaScript' },
-      { id: 'typescript', name: 'TypeScript' },
+      { id: 'html5', name: 'HTML5' },
+      { id: 'css3', name: 'CSS3' },
+      { id: 'sass', name: 'SASS' },
+      { id: 'typescript', name: 'Typescript' },
+      { id: 'react', name: 'React.js' },
+      { id: 'astro', name: 'Astro' },
     ],
   },
   {
@@ -185,7 +187,11 @@ export const skillsList: Array<SkillData> = [
     iconName: 'ServerCog',
     technologies: [
       { id: 'nodejs', name: 'Node.js' },
-      { id: 'restapi', name: 'REST APIs' },
+      { id: 'restapi', name: 'RESTful APIs' },
+      { id: 'graphql', name: 'GraphQL' },
+      { id: 'rust', name: 'Rust' },
+      { id: 'golang', name: 'Golang' },
+      { id: 'python', name: 'Python' },
     ],
   },
   {
@@ -193,7 +199,33 @@ export const skillsList: Array<SkillData> = [
     iconName: 'PenTool',
     technologies: [
       { id: 'figma', name: 'Figma' },
-      { id: 'responsiveDesign', name: 'Responsive Design' },
+      { id: 'wireframing', name: 'Wireframing' },
+      { id: 'prototyping', name: 'Prototyping' },
+    ],
+  },
+  {
+    id: 'blockchainDevelopment',
+    iconName: 'Box',
+    technologies: [
+      { id: 'smartcontracts', name: 'Smart Contracts' },
+      { id: 'web3js', name: 'Web3.js' },
+      { id: 'hardhat', name: 'Hardhat' },
+      { id: 'foundry', name: 'Foundry' },
+      { id: 'ethersjs', name: 'Ethers.js' },
+      { id: 'ink', name: 'Ink' },
+      { id: 'solidity', name: 'Solidity' },
+      { id: 'polkadot', name: 'Polkadot' },
+    ],
+  },
+  {
+    id: 'database',
+    iconName: 'Database',
+    technologies: [
+      { id: 'mysql', name: 'MySQL' },
+      { id: 'postgresql', name: 'PostgreSQL' },
+      { id: 'nosql', name: 'NoSQL' },
+      { id: 'mongodb', name: 'MongoDB' },
+      { id: 'redis', name: 'Redis' },
     ],
   },
   {

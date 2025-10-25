@@ -12,6 +12,7 @@ import {
   ServerCog,
   Database,
   PenTool,
+  Box,
   Network,
   type LucideIcon,
 } from 'lucide-react';
@@ -43,6 +44,16 @@ import {
   SiKubernetes,
   SiGit,
   SiAmazon,
+  SiSass,
+  SiGraphql,
+  SiWeb3Dotjs,
+  SiEthereum,
+  SiEthers,
+  SiRust,
+  SiGo,
+  SiSolidity,
+  SiRedis,
+  SiPolkadot,
 } from 'react-icons/si';
 
 // Define the mapping from iconName to Lucide icon component
@@ -52,6 +63,7 @@ const iconComponents: Record<string, LucideIcon> = {
   ServerCog,
   Database,
   PenTool,
+  Box,
   Network,
 };
 
@@ -66,15 +78,23 @@ const techIconComponents: Record<string, IconType> = {
   css3: SiCss3,
   javascript: SiJavascript,
   nodejs: SiNodedotjs,
+  rust: SiRust,
+  golang: SiGo,
   bun: SiBun,
   deno: SiDeno,
   express: SiExpress,
   nestjs: SiNestjs,
   hono: SiHono,
   python: SiPython,
+  graphql: SiGraphql,
+  web3js: SiWeb3Dotjs,
+  hardhat: SiEthereum,
+  ethersjs: SiEthers,
+  sass: SiSass,
   postgresql: SiPostgresql,
   mysql: SiMysql,
   mongodb: SiMongodb,
+  redis: SiRedis,
   sqlite: SiSqlite,
   prisma: SiPrisma,
   drizzleorm: SiDrizzle,
@@ -83,6 +103,7 @@ const techIconComponents: Record<string, IconType> = {
   kubernetes: SiKubernetes,
   git: SiGit,
   amazonservices: SiAmazon,
+  polkadot: SiPolkadot,
 };
 
 import type { Technology } from '@/data/skills'; // Import the Technology type
@@ -95,7 +116,9 @@ export type Props = {
 };
 
 const { title, description, iconName, technologies = [] } = Astro.props;
-const IconComponent = iconComponents[iconName];
+// Resolve the Lucide icon component for the skill. If the mapping doesn't contain
+// the requested iconName, fall back to MonitorSmartphone to avoid runtime errors.
+const IconComponent = iconComponents[iconName] ?? MonitorSmartphone;
 ---
 
 <Card
