@@ -1,0 +1,14 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ExperiencePageScreen from '@/features/experience/screens/ExperiencePageScreen.astro';
+import { defaultLanguage, useTranslations, type LanguageCode } from '@/i18n/ui';
+
+const lang = (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
+const t = useTranslations(lang, 'site');
+
+const pageTitle = 'Experience';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ExperiencePageScreen />
+</BaseLayout>
