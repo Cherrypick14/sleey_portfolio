@@ -55,6 +55,15 @@ export const ui = {
         description:
           "Conception d'expériences utilisateur intuitives et esthétiques.",
       },
+      blockchainDevelopment: {
+        title: 'Développement Blockchain',
+        description:
+          "Conception et développement d'applications décentralisées (dApps), smart contracts et intégrations Web3.",
+      },
+      database: {
+        title: 'Bases de Données',
+        description: 'Conception et gestion de bases de données relationnelles et NoSQL.',
+      },
       devOps: {
         title: 'DevOps',
         description:
@@ -68,10 +77,11 @@ export const ui = {
     },
     nav: {
       home: 'Accueil',
-      blog: 'Blog',
-      contact: 'Contact',
       projects: 'Projets',
-      tips: 'Astuces',
+      experience: 'Experience',
+      gallery: 'Galerie',
+      community: 'Communauté',
+      contact: 'Contact',
     },
     footer: {
       rights: 'Tous droits réservés.',
@@ -80,10 +90,11 @@ export const ui = {
       pageTitle: 'Accueil |  Développeur FullStack',
       pageDescription:
         "Bienvenue sur le portfolio de YOUR_NAME, développeur FullStack passionné par la création d'expériences web innovantes.",
-      heroGreeting: "Salut, c'est YOUR_NAME",
+      heroGreeting: "Salut, c'est Cheryl",
       heroSubtitlePart1: 'Développeur FullStack',
-      heroSubtitlePart2: 'Passionné UI/UX',
-      heroIntroduction: 'Ajouter une introduction ici.',
+      heroSubtitlePart2: 'Blockchain • Rédactrice technique',
+      heroIntroduction:
+        "Je me spécialise dans le développement full-stack, créant des interfaces utilisateur responsives et dynamiques avec des systèmes backend efficaces. En tant que développeuse blockchain, je me concentre sur la création d'applications décentralisées (dApps) et de smart contracts.",
       heroViewWorkButton: 'Mes réalisations',
       heroContactButton: 'Me contacter',
       heroImageAlt:
@@ -268,6 +279,15 @@ export const ui = {
         title: 'UI/UX Design',
         description: 'Designing intuitive and aesthetic user experiences.',
       },
+      blockchainDevelopment: {
+        title: 'Blockchain Development',
+        description:
+          'Designing and building decentralized applications (dApps), smart contracts and Web3 integrations.',
+      },
+      database: {
+        title: 'Databases',
+        description: 'Designing and managing relational and NoSQL databases.',
+      },
       devOps: {
         title: 'DevOps',
         description: 'Automating development and deployment processes.',
@@ -280,10 +300,11 @@ export const ui = {
     },
     nav: {
       home: 'Home',
-      blog: 'Blog',
-      contact: 'Contact',
       projects: 'Projects',
-      tips: 'Tips',
+      experience: 'Experience',
+      gallery: 'Gallery',
+      community: 'Community',
+      contact: 'Contact',
     },
     footer: {
       rights: 'All rights reserved.',
@@ -292,10 +313,11 @@ export const ui = {
       pageTitle: 'Home | YOUR_NAME - FullStack Developer',
       pageDescription:
         'Welcome to the portfolio of YOUR_NAME, a FullStack developer passionate about creating innovative web experiences.',
-      heroGreeting: "Hi, I'm YOUR_NAME",
+      heroGreeting: "Hi, I'm Cheryl.",
       heroSubtitlePart1: 'Full Stack Developer',
-      heroSubtitlePart2: 'UI/UX Enthusiast',
-      heroIntroduction: 'Add an introduction here.',
+      heroSubtitlePart2: 'Blockchain • Technical Writer',
+      heroIntroduction:
+        'I specialize in full-stack development, creating responsive and dynamic user interfaces with efficient backend systems. As a blockchain developer, I focus on building decentralized applications (dApps) and smart contracts.',
       heroViewWorkButton: 'View My Work',
       heroContactButton: 'Get In Touch',
       heroImageAlt:
