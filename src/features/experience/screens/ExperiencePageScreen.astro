@@ -1,0 +1,41 @@
+---
+import { Card, CardContent } from "@/components/ui/card";
+
+interface ExperienceItem {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
+const experiences: ExperienceItem[] = [
+  {
+    title: "Senior Developer",
+    company: "Company Name",
+    period: "2020 - Present",
+    description: "Description of your role and achievements"
+  },
+  // Add more experiences
+];
+---
+
+<div class="container mx-auto px-4">
+  <h1 class="text-4xl font-bold mb-8 text-center">Experience</h1>
+  
+  <div class="max-w-4xl mx-auto space-y-6">
+    {experiences.map((experience) => (
+      <Card>
+        <CardContent class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-semibold">{experience.title}</h3>
+              <p class="text-muted-foreground">{experience.company}</p>
+            </div>
+            <span class="text-sm text-muted-foreground">{experience.period}</span>
+          </div>
+          <p class="text-muted-foreground">{experience.description}</p>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
