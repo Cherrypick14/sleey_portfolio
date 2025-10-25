@@ -5,37 +5,172 @@ interface ExperienceItem {
   title: string;
   company: string;
   period: string;
-  description: string;
+  bullets: string[]; // list of achievements / responsibilities (Key Achievements)
+  objective?: string;
+  languages?: string[];
 }
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Senior Developer",
-    company: "Company Name",
-    period: "2020 - Present",
-    description: "Description of your role and achievements"
+    title: "Full-Stack Software Developer",
+    company: "Zone01 Kisumu | Kenya",
+    period: "April 2024 - Present",
+    objective: "Design and deliver full-stack features while improving performance and developer experience.",
+    languages: ["TypeScript", "Javascript", "Rust", "Golang",  "Python"],
+    bullets: [
+      "Successfully led the development of key features, improving application performance by 15% and enhancing user experience.",
+      "Collaborated with senior developers on designing, coding, and implementing new features while participating in agile development processes.",
+      "Contributed to open-source projects, enhancing skills in collaborative software development.",
+    ],
   },
-  // Add more experiences
+  {
+    title: "Junior Developer Intern",
+    company: "DecOps | Raleigh, NC, USA",
+    period: "May 2023 - April 2024",
+    objective: "Support product development through testing, automation, and stakeholder collaboration to deliver reliable solutions.",
+    languages: ["Typescript", "Docker", "Bash", "React", "Figma"],
+    bullets: [
+      "Identified and proposed system enhancements, leading to a 20% increase in overall system efficiency and a 15% reduction in administrative workload.",
+      "Communicated with stakeholders and translated their needs into technical requirements to provide effective solutions.",
+      "Performed UI tests achieving 95% test coverage, detecting and resolving 15 critical issues, and reducing test execution time by 20%.",
+      "Conducted extensive research and analysis for developing 6+ software product designs.",
+    ],
+  },
 ];
+
+const education = [
+  {
+    institution: "Murang'a University of Technology",
+    period: "Sep 2018 - Jul 2022",
+    degree: "Bachelors | Computer Technology",
+    gpa: "GPA: 3.5",
+  },
+];
+
+const leadership = [
+  {
+    title: "Rust Technical Lead",
+    organization: "Zone01 Kisumu | Kenya",
+    period: "Jan 2025 - Present",
+    bullets: [
+      "Community Building & Mentorship – Lead workshops and mentorship programs to grow Rust adoption in Kisumu.",
+      "Technical Advocacy – Promote Rust best practices, contribute to open-source projects and foster developer engagement.",
+      "Project Development & Collaboration – Drive innovative Rust-based projects while collaborating with industry experts and local developers.",
+    ],
+  },
+];
+
+function getStartYear(period: string) {
+  const m = period.match(/\d{4}/);
+  return m ? m[0] : period;
+}
 ---
 
 <div class="container mx-auto px-4">
   <h1 class="text-4xl font-bold mb-8 text-center">Experience</h1>
-  
-  <div class="max-w-4xl mx-auto space-y-6">
-    {experiences.map((experience) => (
-      <Card>
-        <CardContent class="p-6">
-          <div class="flex justify-between items-start mb-4">
-            <div>
-              <h3 class="text-xl font-semibold">{experience.title}</h3>
-              <p class="text-muted-foreground">{experience.company}</p>
-            </div>
-            <span class="text-sm text-muted-foreground">{experience.period}</span>
+
+  <div class="mt-6 grid gap-8 md:grid-cols-[220px_1fr]">
+    <!-- Left timeline column (hidden on small screens) -->
+    <aside class="hidden md:block">
+      <div class="relative pl-8">
+        <!-- vertical line -->
+        <div class="absolute left-4 top-0 bottom-0 w-[2px] bg-muted-foreground/40"></div>
+
+        {experiences.map((exp, i) => (
+          <div class="relative mb-10">
+            <div class="absolute -left-5 top-0 flex items-center justify-center w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
+            <div class="text-sm text-muted-foreground">{getStartYear(exp.period)}</div>
           </div>
-          <p class="text-muted-foreground">{experience.description}</p>
-        </CardContent>
-      </Card>
-    ))}
+        ))}
+      </div>
+    </aside>
+
+    <!-- Right content column -->
+    <main>
+      <div class="space-y-8">
+        {experiences.map((experience) => (
+          <div class="">
+            <Card>
+              <CardContent class="p-6 md:pl-10">
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 class="text-xl font-semibold">{experience.title}</h3>
+                    <p class="text-muted-foreground">{experience.company}</p>
+                  </div>
+                  <span class="text-sm text-muted-foreground">{experience.period}</span>
+                </div>
+
+                {experience.objective && (
+                  <p class="mb-4 text-muted-foreground">{experience.objective}</p>
+                )}
+
+                <div>
+                  <h4 class="text-sm font-medium mb-2">Key achievements</h4>
+                  <ul class="list-disc pl-5 space-y-2 text-muted-foreground">
+                    {experience.bullets.map((b) => (
+                      <li>{b}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {experience.languages && experience.languages.length > 0 && (
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {experience.languages.map((lang) => (
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-muted-foreground/10 text-muted-foreground">{lang}</span>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        ))}
+      </div>
+
+      <!-- Divider and Education -->
+      <div class="mt-10">
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <div class="space-y-4">
+          {education.map((ed) => (
+            <Card>
+              <CardContent class="p-6 md:pl-10">
+                <div class="flex justify-between items-start mb-2">
+                  <div>
+                    <h3 class="text-lg font-medium">{ed.institution}</h3>
+                    <p class="text-muted-foreground">{ed.degree}</p>
+                  </div>
+                  <span class="text-sm text-muted-foreground">{ed.period}</span>
+                </div>
+                <p class="text-muted-foreground">{ed.gpa}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      <!-- Leadership & Activities -->
+      <div class="mt-10">
+        <h2 class="text-2xl font-semibold mb-4">Leadership & Activities</h2>
+        <div class="space-y-4">
+          {leadership.map((l) => (
+            <Card>
+              <CardContent class="p-6 md:pl-10">
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 class="text-lg font-medium">{l.title}</h3>
+                    <p class="text-muted-foreground">{l.organization}</p>
+                  </div>
+                  <span class="text-sm text-muted-foreground">{l.period}</span>
+                </div>
+                <ul class="list-disc pl-5 space-y-2 text-muted-foreground">
+                  {l.bullets.map((b) => (
+                    <li>{b}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </main>
   </div>
 </div>
