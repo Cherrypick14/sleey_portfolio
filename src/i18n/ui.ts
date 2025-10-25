@@ -10,34 +10,65 @@ export type LanguageCode = keyof typeof languages;
 export const ui = {
   fr: {
     projectsContent: {
-      sampleProject: {
-        title: 'Exemple de Projet',
-        description: "Ceci est un projet d'exemple pour le template.",
-        imageAltText: "Image placeholder pour le projet d'exemple",
-        categoryText: 'Application Web',
-        dateText: 'Janvier 2025',
+      polkadotNetworkPulse: {
+        title: 'Polkadot Network Pulse',
+        description: "Un tableau de bord en temps réel pour surveiller et visualiser le réseau Polkadot avec PAPI.",
+        imageAltText: "Capture d'écran du tableau de bord Polkadot Network Pulse",
+        categoryText: 'Dashboard Blockchain Analytics',
+        dateText: 'Octobre 2025',
         detailedDescription:
-          "Une description plus détaillée de ce projet d'exemple, montrant comment structurer le contenu pour la page de détail du projet.",
+          "Un tableau de bord blockchain moderne qui démontre la puissance de PAPI pour interagir avec le réseau Polkadot. L'application offre une surveillance en temps réel des blocs, des métriques de réseau et une visualisation interactive des données blockchain.",
         keyFeatures: {
-          responsiveDesign: {
-            title: 'Design Adaptatif',
-            description: "Le projet s'adapte à toutes les tailles d'écran.",
+          realTimeUpdates: {
+            title: 'Mises à jour en temps réel',
+            description: 'Flux de blocs en direct avec des animations fluides et des mises à jour instantanées.',
           },
-          contentManagement: {
-            title: 'Gestion de Contenu Facile',
-            description:
-              'Permet une gestion aisée du contenu via des fichiers Markdown ou un CMS.',
+          blockchainMetrics: {
+            title: 'Métriques blockchain',
+            description: 'Surveillance des numéros de blocs finalisés et calcul du temps moyen des blocs.',
           },
-        },
-        galleryImages: {
-          // sampleGalleryImage1: { // Si tu actives la galerie pour l'exemple
-          //   alt: "Texte alternatif pour l'image de galerie 1",
-          //   caption: "Légende pour l'image de galerie 1",
-          // },
+          websocketIntegration: {
+            title: 'Intégration WebSocket',
+            description: 'Connexion WebSocket persistante avec gestion automatique de la reconnexion.',
+          },
+          reactiveSubscriptions: {
+            title: 'Souscriptions réactives',
+            description: 'Utilisation des observables pour une gestion efficace des flux de données en temps réel.',
+          },
+          performanceOptimized: {
+            title: 'Optimisation des performances',
+            description: 'Bundle size réduit et gestion efficace de la mémoire pour une expérience fluide.',
+          },
         },
         challenges:
-          'Description des défis rencontrés lors de la création de ce projet exemple.',
-        learnings: 'Description des apprentissages tirés de ce projet exemple.',
+          "Le plus grand défi a été de gérer efficacement les mises à jour fréquentes des données blockchain tout en maintenant une interface utilisateur réactive. L'implémentation des reconnexions automatiques et la gestion de l'état de connexion ont également nécessité une attention particulière.",
+        learnings: "Ce projet m'a permis de maîtriser PAPI et les concepts de programmation réactive. J'ai appris l'importance de la gestion efficace des connexions WebSocket et des stratégies d'optimisation des performances pour les applications en temps réel.",
+      },
+      web3wayafrica: {
+        title: 'Web3way Africa Official Website',
+        description: "Plateforme communautaire pour connecter et éduquer les développeurs blockchain en Afrique.",
+        imageAltText: "Capture d'écran du site Web3way Africa",
+        categoryText: 'Plateforme Communautaire',
+        dateText: 'Septembre 2025',
+        detailedDescription:
+          "Une plateforme communautaire dynamique conçue pour connecter, éduquer et soutenir les développeurs blockchain à travers l'Afrique. Le site sert de hub central pour les ressources éducatives, les événements et les opportunités de networking dans l'écosystème Web3.",
+        keyFeatures: {
+          communityEngagement: {
+            title: 'Engagement communautaire',
+            description: 'Forums de discussion et espaces de collaboration pour les développeurs.',
+          },
+          educationalResources: {
+            title: 'Ressources éducatives',
+            description: 'Bibliothèque de contenus éducatifs sur la blockchain et le développement Web3.',
+          },
+          eventManagement: {
+            title: 'Gestion des événements',
+            description: 'Système intégré pour organiser et gérer les événements communautaires.',
+          },
+        },
+        challenges:
+          "La création d'une plateforme accessible et engageante pour une communauté diverse, tout en assurant des performances optimales et une expérience utilisateur cohérente.",
+        learnings: "L'importance de la conception centrée sur l'utilisateur et de l'architecture évolutive pour les plateformes communautaires.",
       },
     },
     skillsContent: {
@@ -99,7 +130,7 @@ export const ui = {
       heroContactButton: 'Me contacter',
       heroImageAlt:
         'Illustration représentant YOUR_NAME ou un concept de développement',
-      featuredProjectsTitle: '3 derniers projets',
+      featuredProjectsTitle: '2 derniers projets',
       featuredProjectsDescription:
         "Voici quelques projets sur lesquels j'ai récemment travaillé. N'hésitez pas à les explorer !",
       projectCardViewProject: 'Voir le projet',
@@ -235,34 +266,65 @@ export const ui = {
   },
   en: {
     projectsContent: {
-      sampleProject: {
-        title: 'Sample Project',
-        description: 'This is a sample project for the template.',
-        imageAltText: 'Placeholder image for the sample project',
-        categoryText: 'Web Application',
-        dateText: 'January 2025',
+      polkadotNetworkPulse: {
+        title: 'Polkadot Network Pulse',
+        description: 'A real-time dashboard to monitor and visualize the Polkadot network using PAPI.',
+        imageAltText: 'Screenshot of the Polkadot Network Pulse dashboard',
+        categoryText: 'Blockchain Analytics Dashboard',
+        dateText: 'October 2025',
         detailedDescription:
-          'A more detailed description of this sample project, showing how to structure content for the project detail page.',
+          'A modern blockchain dashboard that showcases the power of PAPI for interacting with the Polkadot network. The application provides real-time block monitoring, network metrics, and interactive blockchain data visualization.',
         keyFeatures: {
-          responsiveDesign: {
-            title: 'Responsive Design',
-            description: 'The project adapts to all screen sizes.',
+          realTimeUpdates: {
+            title: 'Real-time Updates',
+            description: 'Live block feed with smooth animations and instant updates.',
           },
-          contentManagement: {
-            title: 'Easy Content Management',
-            description:
-              'Allows for easy content management via Markdown files or a CMS.',
+          blockchainMetrics: {
+            title: 'Blockchain Metrics',
+            description: 'Monitor finalized block numbers and calculate average block time.',
           },
-        },
-        galleryImages: {
-          // sampleGalleryImage1: { // If you enable gallery for the example
-          //   alt: 'Alt text for gallery image 1',
-          //   caption: 'Caption for gallery image 1',
-          // },
+          websocketIntegration: {
+            title: 'WebSocket Integration',
+            description: 'Persistent WebSocket connection with automatic reconnection handling.',
+          },
+          reactiveSubscriptions: {
+            title: 'Reactive Subscriptions',
+            description: 'Utilizing observables for efficient real-time data stream management.',
+          },
+          performanceOptimized: {
+            title: 'Performance Optimized',
+            description: 'Reduced bundle size and efficient memory management for a smooth experience.',
+          },
         },
         challenges:
-          'Description of challenges encountered while creating this sample project.',
-        learnings: 'Description of learnings from this sample project.',
+          'The biggest challenge was efficiently handling frequent blockchain data updates while maintaining a responsive user interface. Implementing automatic reconnections and managing connection state also required careful consideration.',
+        learnings: 'This project helped me master PAPI and reactive programming concepts. I learned the importance of efficient WebSocket connection management and performance optimization strategies for real-time applications.',
+      },
+      web3wayafrica: {
+        title: 'Web3way Africa Official Website',
+        description: 'Community platform connecting and educating blockchain developers across Africa.',
+        imageAltText: 'Screenshot of Web3way Africa website',
+        categoryText: 'Community Platform',
+        dateText: 'September 2025',
+        detailedDescription:
+          'A dynamic community platform designed to connect, educate, and support blockchain developers across Africa. The site serves as a central hub for educational resources, events, and networking opportunities in the Web3 ecosystem.',
+        keyFeatures: {
+          communityEngagement: {
+            title: 'Community Engagement',
+            description: 'Discussion forums and collaboration spaces for developers.',
+          },
+          educationalResources: {
+            title: 'Educational Resources',
+            description: 'Library of educational content on blockchain and Web3 development.',
+          },
+          eventManagement: {
+            title: 'Event Management',
+            description: 'Integrated system for organizing and managing community events.',
+          },
+        },
+        challenges:
+          'Creating an accessible and engaging platform for a diverse community while ensuring optimal performance and consistent user experience.',
+        learnings: 'The importance of user-centered design and scalable architecture for community platforms.',
       },
     },
     skillsContent: {
@@ -322,7 +384,7 @@ export const ui = {
       heroContactButton: 'Get In Touch',
       heroImageAlt:
         'Illustration representing YOUR_NAME or a development concept',
-      featuredProjectsTitle: '3 latest projects',
+      featuredProjectsTitle: '2 latest projects',
       featuredProjectsDescription:
         "Here are some of the projects I've recently worked on. Feel free to explore!",
       projectCardViewProject: 'View Project',

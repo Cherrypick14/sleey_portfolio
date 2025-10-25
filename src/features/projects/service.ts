@@ -8,35 +8,52 @@ import type {
   TranslatedSkill,
 } from './type';
 
+import papiDemoImage from '@/assets/PAPI DEMO.png';
+import web3wayaImage from '@/assets/Web3wayafrica_website.png';
+
 const projectsListUnsorted: Array<ProjectData> = [
   {
-    id: 'sampleProject', // Unique identifier for translations
-    slug: 'sample-project', // Used in the URL
-    imageUrl: placeholderImage, // Use imported ImageMetadata
-    // projectUrl: '#', // Optional: Link to the live project
-    // codeUrl: '#', // Optional: Link to the source code
-    tags: ['Astro', 'TypeScript', 'Template'], // Generic tags
-    category: 'Web Application', // Generic category
-    date: '2025-01-01', // Generic date
-    galleryImages: [
-      // Optional: Gallery images for the project
-      // {
-      //   id: 'sampleGalleryImage1',
-      //   src: placeholderImage, // Placeholder, needs ImageMetadata
-      // },
-    ],
+    id: 'polkadotNetworkPulse',
+    slug: 'polkadot-network-pulse',
+    imageUrl: papiDemoImage,
+    projectUrl: 'https://polkadot-network-pulse.vercel.app/',
+    codeUrl: 'https://github.com/Cherrypick14/polkadot-network-pulse',
+    tags: ['React', 'TypeScript', 'PAPI', 'Blockchain', 'Real-time'],
+    category: 'Blockchain Analytics Dashboard',
+    date: '2025-10',
     keyFeatures: [
-      // Key features (IDs for translation)
-      { id: 'responsiveDesign' },
-      { id: 'contentManagement' },
+      { id: 'realTimeUpdates' },
+      { id: 'blockchainMetrics' },
+      { id: 'websocketIntegration' },
+      { id: 'reactiveSubscriptions' },
+      { id: 'performanceOptimized' }
     ],
     technologiesUsed: [
-      // Technologies used (IDs for display)
-      { id: 'astro', name: 'Astro' },
+      { id: 'react', name: 'React 19' },
       { id: 'typescript', name: 'TypeScript' },
-      { id: 'tailwindcss', name: 'TailwindCSS' },
+      { id: 'polkadot', name: 'Polkadot' },
+      { id: 'tailwindcss', name: 'Tailwind CSS' }
     ],
   },
+  {
+    id: 'web3wayafrica',
+    slug: 'web3wayafrica-official-website',
+    imageUrl: web3wayaImage,
+    projectUrl: 'https://web3wayafrica.com',
+    tags: ['Web3', 'Community', 'Education'],
+    category: 'Community Platform',
+    date: '2025-09',
+    keyFeatures: [
+      { id: 'communityEngagement' },
+      { id: 'educationalResources' },
+      { id: 'eventManagement' }
+    ],
+    technologiesUsed: [
+      { id: 'react', name: 'React' },
+      { id: 'typescript', name: 'TypeScript' },
+      { id: 'tailwindcss', name: 'Tailwind CSS' }
+    ],
+  }
 ];
 
 export const projectsList = [...projectsListUnsorted].sort((a, b) => {
