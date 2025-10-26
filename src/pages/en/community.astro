@@ -1,0 +1,14 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CommunityPageScreen from '@/features/community/screens/CommunityPageScreen.astro';
+import { defaultLanguage, useTranslations, type LanguageCode } from '@/i18n/ui';
+
+const lang = (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
+const t = useTranslations(lang, 'site');
+
+const pageTitle = 'Community';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <CommunityPageScreen />
+</BaseLayout>
