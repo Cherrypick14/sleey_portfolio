@@ -1,0 +1,14 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import GalleryPageScreen from '@/features/gallery/screens/GalleryPageScreen.astro';
+import { defaultLanguage, useTranslations, type LanguageCode } from '@/i18n/ui';
+
+const lang = (Astro.currentLocale as LanguageCode | undefined) ?? defaultLanguage;
+const t = useTranslations(lang, 'site');
+
+const pageTitle = 'Gallery';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <GalleryPageScreen />
+</BaseLayout>
