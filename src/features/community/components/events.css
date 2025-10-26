@@ -1,0 +1,22 @@
+.events-belt {
+  transition: all 0.5s ease;
+}
+
+.events-belt:hover {
+  animation-play-state: paused;
+}
+
+.event-card {
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+@media (prefers-reduced-motion) {
+  .events-belt {
+    animation: none;
+  }
+}
