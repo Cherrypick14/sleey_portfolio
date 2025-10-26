@@ -1,66 +1,108 @@
 ---
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+import CommunityHero from "../components/CommunityHero.astro";
+import InvolvementCard from "../components/InvolvementCard";
+import EventsSection from "../components/EventsSection";
 
-interface CommunityItem {
-  imageUrl: string;
-  title: string;
-  description: string;
-}
+// Import images
+import ch2 from "@/assets/Cheryl2.jpg";
+import ch3 from "@/assets/Cheryl3.jpg";
+import ch4 from "@/assets/Cheryl4.jpg";
+import eth1 from "@/assets/ETH_Capetown.jpg";
+import eth2 from "@/assets/ETHCAP2.jpg";
+import eth3 from "@/assets/Ethcap3.jpg";
+import droid1 from "@/assets/droidcon1.jpg";
+import droid2 from "@/assets/droidcon2.jpg";
+import droid3 from "@/assets/droidcon3.jpg";
 
-const communityItems: CommunityItem[] = [
+const involvementCards = [
   {
-    imageUrl: "/path/to/community1.jpg",
-    title: "Community Event 1",
-    description: "Description of community event 1"
+    image: ch3,
+    title: "Community Building",
+    description: "Leading and nurturing developer communities across Kenya, focusing on blockchain education and adoption.",
+    stats: [
+      { label: "Events Organized", value: "6+" },
+      { label: "Attendees Reached", value: "100+" }
+    ]
   },
-  {
-    imageUrl: "/path/to/community2.jpg",
-    title: "Community Event 2",
-    description: "Description of community event 2"
-  },
-  // Add more items as needed
+   {
+    image: ch2,
+    title: "Technical Workshops & Training",
+    description: "Conducting hands-on workshops on Web3 development, smart contracts, and supporting developers through their learning journey.",
+    stats: [
+      { label: "Workshops Delivered", value: "4+" },
+      { label: "Developers Trained", value: "60+" },
+      { label: "Hours Teaching", value: "40+" }
+    ]
+  }
 ];
+
+const events = [
+  {
+    image: eth1,
+    title: "W3Node Conference & ETHCapeTown Hackathon",
+    description: "I received a travel sponsorship to participate in the ETHCapeTown hackathon in South Africa. The experience included full access to all conference sessions, where I gained valuable insights from top blockchain developers and innovators",
+    date: "Sept 2024"
+  },
+  {
+    image: eth2,
+    title: "Building Networks in Blockchain",
+    description: "Had an enriching meetup with key figures in the blockchain space, including Felix Macharia (Kotani Pay CEO), Allan Mangeni (Filecoin Community), Eric Annan (AyaHQ Labs), and Stephanie (Celo Protocol Developer).",
+    date: "Sept 2024"
+  },
+  {
+    image: eth3,
+    title: "Africa Blockchain Club Meetup",
+    description: "Met Kalah Haley (Founder and CEO of Mothore Foundry and SaintRock Media), Maite and Genny from WeThinkCode, and members of the Africa Blockchain Club in Johannesburg, discussing the future of blockchain in Africa.",
+    date: "Sept 2024"
+  },
+  {
+    image: droid1,
+    title: "DroidconKE X FlutterConKE Community Day",
+    description: "Connected with tech enthusiasts like Ferdinand, Leyian, and Roina Ochieng, sharing insights on building and scaling tech products during the community day event.",
+    date: "Nov 2024"
+  },
+  {
+    image: droid2,
+    title: "FlutterCon & DroidConKE Wrap up",
+    description: "Engaged with the Gophers community, event organizers, and speakers during the final round of FlutterConKE and DroidConKE conference.",
+    date: "Nov 2024"
+  },
+  {
+    image: droid3,
+    title: "5-Day Ideation Sprint",
+    description: "Collaborated with the Gophers Nairobi team on a 5-day ideation sprint, focusing on problem-solving and idea validation.",
+    date: "Nov 2024"
+  }
+];
+
 ---
 
-<div class="container mx-auto px-4">
-  <h1 class="text-4xl font-bold mb-8 text-center">Community</h1>
+<div class="min-h-screen">
+  <CommunityHero />
   
-  <div class="max-w-4xl mx-auto mb-12 text-center">
-    <p class="text-lg text-muted-foreground">
-      Join our vibrant community and be part of something special. Together we create, learn, and grow.
-    </p>
-  </div>
-
-  <Carousel
-    opts={{
-      align: "start",
-      loop: true,
-    }}
-    class="w-full"
-  >
-    <CarouselContent>
-      {communityItems.map((item) => (
-        <CarouselItem class="md:basis-1/2 lg:basis-1/3">
-          <div class="p-1">
-            <Card>
-              <CardContent class="flex flex-col aspect-square items-center justify-center p-6">
-                <img 
-                  src={item.imageUrl} 
-                  alt={item.title}
-                  class="w-full h-48 object-cover rounded-t-lg"
-                />
-                <div class="p-4">
-                  <h3 class="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p class="text-muted-foreground">{item.description}</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </CarouselItem>
+  <section class="py-16 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12 text-center">My Involvement</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {involvementCards.map(card => (
+        <InvolvementCard 
+          client:load
+          image={card.image}
+          title={card.title}
+          description={card.description}
+          stats={card.stats}
+        />
       ))}
-    </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
-  </Carousel>
+    </div>
+  </section>
+
+  <section class="py-16 bg-muted/10">
+    <div class="container mx-auto px-4 mb-8">
+      <h2 class="text-3xl font-bold mb-4 text-center">Moments & Events</h2>
+      <p class="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
+        A showcase of community events, workshops, and memorable moments.
+      </p>
+    </div>
+    
+    <EventsSection client:load events={events} />
+  </section>
 </div>
