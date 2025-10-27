@@ -39,7 +39,7 @@ const projectsListUnsorted: Array<ProjectData> = [
     id: 'web3wayafrica',
     slug: 'web3wayafrica-official-website',
     imageUrl: web3wayaImage,
-    projectUrl: 'https://web3wayafrica.com',
+    projectUrl: 'https://w3wayafrica-website.vercel.app/',
     tags: ['Web3', 'Community', 'Education'],
     category: 'Community Platform',
     date: '2025-09',
