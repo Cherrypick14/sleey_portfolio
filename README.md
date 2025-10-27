@@ -25,5 +25,6 @@ Key files / folders
 - `src/layouts/BaseLayout.astro` — main layout and nav items
 
 
+Deployed site - https://sleey-portfolio.vercel.app/
 
 
